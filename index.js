@@ -1,6 +1,9 @@
 var restify = require('restify');
 var validate = require('jsonschema').validate;
 var budgetSchema = require('./schemas/budget.json');
+var budgetController = require('./controllers/budgetController');
+
+var budgets = [];
 
 function respond(req, res, next) {
     console.log('in respond')
@@ -25,7 +28,7 @@ server.use(restify.plugins.bodyParser());
 
 server.get('/hello/:name', respond);
 server.head('/hello/:name', respond);
-server.post('/customer', postRespond);
+server.post('/budgets', budgetController.createBudget);
 
 /*
 server.use(function(req, res, next) {
