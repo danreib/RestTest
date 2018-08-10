@@ -6,7 +6,10 @@
     "properties": {
         "name": {
             "type": "string",
-            "description": "The name of the budget."
+            "description": "The name of the budget.",
+            "pattern": "^[a-zA-Z0-9_]*$",
+            "minLength": 1,
+            "maxLength": 50
         },
         "amount": {
             "type": "number",

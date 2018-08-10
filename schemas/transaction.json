@@ -1,0 +1,37 @@
+{
+    "$id": "https://daniel.reib.com/budgetschema/transaction",
+    "$schema": "http://json-schema.org/schema#",
+    "title": "Transaction",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "description": "The unique identifier for this transaction.",
+            "pattern": "^[a-zA-Z0-9_]*$",
+            "minLength": 1,
+            "maxLength": 50
+        },
+        "date": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "payee": {
+            "type": "string",
+            "description": "The name of the entity that is being paid.",
+            "minLength": 1,
+            "maxLength": 200
+        },
+        "amount": {
+            "type": "number",
+            "description": "The amount being paid."
+        },
+        "category": {
+            "type": "string",
+            "description": "The budget category this transaction is associated with",
+            "pattern": "^[a-zA-Z0-9_]*$",
+            "minLength": 1,
+            "maxLength": 50
+        }
+    },
+    "required": ["id", "date", "payee", "amount", "category"]
+}

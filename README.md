@@ -8,8 +8,8 @@
 #  Budget        | delete Budget | DELETE /budget/123                      |
 #                | view Budget   | GET /budget/123                         |
 #---------------------------------------------------------------------------
-#                | Create tran   | POST /budgets/123/trans with payload    |
-#                | update tran   | PUT /budgets/123/trans/123 with payload |
-#  Budget        | delete tran   | DELETE /budget/123/trans/123            |
-#                | view tran     | GET /budget/123/trans/123               |
+#                | Create tran   | POST /transactions with payload         |
+#                | update tran   | PUT /transactions/123 with payload      |
+#  Transaction   | delete tran   | DELETE /transactions/123                |
+#                | view tran     | GET /transactions/123                   |
 #---------------------------------------------------------------------------
